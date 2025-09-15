@@ -8,7 +8,7 @@ st.header("Customer Details")
 customer_name = st.text_input("Customer Name")
 customer_phone = st.text_input("Customer Phone Number")
 
-# Input: Items
+# Input: Itemsss
 st.header("Add Items")
 num_items = st.number_input("How many different items?", min_value=1, max_value=50, value=1, step=1)
 
