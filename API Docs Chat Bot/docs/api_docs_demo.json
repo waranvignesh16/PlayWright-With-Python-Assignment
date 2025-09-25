@@ -1,0 +1,143 @@
+[{
+    "Api name": "Get a ticket",
+    "Api URL": "/api/v1/tickets/{ticket_id}",
+    "Api Method": "GET",
+    "Desc": "This API fetches a single ticket from your helpdesk.",
+    "OAuth Scope": "Desk.tickets.READ",
+    "Request Example": "$ curl -X GET\nhttps://desk.zoho.com/api/v1/tickets/1892000000143237?include=contacts,products,assignee,departments,team\n-H\n\"orgId:2389290\"\n-H\n\"Authorization:Zoho-oauthtoken 1000.3d0a155402dbb59f776fd63adb1e67c0.a41ea557a6a8d7e402690098b2056f60s\"",
+    "Params": [
+      {
+        "name": "Param Name",
+        "data_type": "Data Type",
+        "description": "Description"
+      },
+      {
+        "name": "include see documentation",
+        "data_type": "string optional, max chars : 100",
+        "description": "Key that fetches secondary information related to the ticket. Values allowed are: contacts , products , assignee , departments , contract , isRead , team , and skills . Multiple values can be passed, with commas for separation."
+      }
+    ],
+    "Response Example": "{\n  \"modifiedTime\" : \"2016-06-21T13:16:14.000Z\",\n  \"subCategory\" : \"Sub General\",\n  \"statusType\" : \"Open\",\n  \"subject\" : \"Hi. There is a sudden delay in the processing of the orders. Check this with high priority\",\n  \"dueDate\" : \"2016-06-21T16:16:16.000Z\",\n  \"departmentId\" : \"1892000000006907\",\n  \"channel\" : \"FORUMS\",\n  \"onholdTime\" : null,\n  \"language\" : \"English\",\n  \"source\" : {\n    \"appName\" : null,\n    \"extId\" : null,\n    \"type\" : \"SYSTEM\",\n    \"permalink\" : null,\n    \"uuid\" : null,\n    \"appPhotoURL\" : null\n  },\n  \"resolution\" : null,\n  \"sharedDepartments\" : [ {\n    \"name\" : \"Sample Department Name\",\n    \"id\" : \"1892000000006909\",\n    \"type\" : \"READ_WRITE\"\n  }, {\n    \"name\" : \"Sample Department Name\",\n    \"id\" : \"1892000000006911\",\n    \"type\" : \"READ_ONLY\"\n  } ],\n  \"closedTime\" : null,\n  \"sharedCount\" : \"3\",\n  \"approvalCount\" : \"1\",\n  \"isOverDue\" : false,\n  \"isTrashed\" : false,\n  \"contact\" : {\n    \"lastName\" : \"Carol\",\n    \"firstName\" : \"Lucas\",\n    \"phone\" : \"1 888 900 9646\",\n    \"mobile\" : \"8838486174\",\n    \"id\" : \"1892000000042032\",\n    \"isSpam\" : false,\n    \"type\" : null,\n    \"email\" : \"carol@zylker.com\",\n    \"account\" : {\n      \"website\" : \"www.desk.com\",\n      \"accountName\" : \"desk Account\",\n      \"id\" : \"1892000000975382\"\n    }\n  },\n  \"createdTime\" : \"2013-11-04T11:21:07.000Z\",\n  \"id\" : \"1892000000042034\",\n  \"customerResponseTime\" : \"2013-11-04T11:21:07.912Z\",\n  \"productId\" : null,\n  \"contactId\" : \"1892000000042032\",\n  \"threadCount\" : \"121\",\n  \"secondaryContacts\" : [ \"1892000000042038\", \"1892000000042042\", \"1892000000042056\" ],\n  \"priority\" : \"High\",\n  \"classification\" : null,\n  \"commentCount\" : \"1\",\n  \"taskCount\" : \"1\",\n  \"phone\" : \"1 888 900 9646\",\n  \"webUrl\" : \"https://desk.zoho.com/support/zylker/ShowHomePage.do#Cases/dv/d126330fb061247d9ebddaeb9d93ba74750b0284bc703b38\",\n  \"isSpam\" : false,\n  \"assignee\" : {\n    \"firstName\" : \"dasca\",\n    \"lastName\" : \"vins\",\n    \"photoURL\" : \"https://desk.zoho.com/api/v1/agents/1892000000056007/photo?orgId=298902\",\n    \"id\" : \"1892000000056007\",\n    \"email\" : \"jack@zylker.com\"\n  },\n  \"status\" : \"Open\",\n  \"entitySkills\" : [ \"18921000000379001\", \"18921000000364001\", \"18921000000379055\", \"18921000000379031\" ],\n  \"ticketNumber\" : \"101\",\n  \"isRead\" : false,\n  \"description\" : \"Hi. There is a sudden delay in the processing of the orders. Check this with high priority\",\n  \"timeEntryCount\" : \"3\",\n  \"channelRelatedInfo\" : {\n    \"topicId\" : \"1892000000056253\",\n    \"isTopicDeleted\" : false,\n    \"forumStatus\" : \"ANALYSING\",\n    \"sourceLink\" : \"https://desk.zoho.com/support/zylker/ShowHomePage.do#Community/singlepost/problem-topic-forum-ticket-18-5-2018\",\n    \"topicType\" : \"PROBLEM\"\n  },\n  \"isDeleted\" : \"false\",\n  \"department\" : {\n    \"name\" : \"dasdasdasd\",\n    \"id\" : \"1892000000006907\"\n  },\n  \"followerCount\" : \"5\",\n  \"email\" : \"carol@zylker.com\",\n  \"layoutDetails\" : {\n    \"id\" : \"5000000013466\",\n    \"layoutName\" : \"Default Ticket Layout\"\n  },\n  \"channelCode\" : null,\n  \"product\" : null,\n  \"cf\" : {\n    \"cf_permanentaddress\" : null,\n    \"cf_dateofpurchase\" : null,\n    \"cf_phone\" : null,\n    \"cf_numberofitems\" : null,\n    \"cf_url\" : null,\n    \"cf_secondaryemail\" : null,\n    \"cf_severitypercentage\" : \"0.0\",\n    \"cf_modelname\" : \"F3 2017\"\n  },\n  \"isFollowing\" : \"true\",\n  \"team\" : {\n    \"name\" : \"kjsdfjks\",\n    \"id\" : \"8920000000069071\",\n    \"logoUrl\" : \"https://desk.zoho.com/api/v1/teams/8920000000069071/logo?orgId=11278831\"\n  },\n  \"assigneeId\" : \"1892000000056007\",\n  \"teamId\" : \"8920000000069071\",\n  \"contractId\" : null,\n  \"tagCount\" : \"2\",\n  \"attachmentCount\" : \"1\",\n  \"isEscalated\" : false,\n  \"category\" : \"general\"\n}"
+  },
+  {
+    "Api name": "List all tickets",
+    "Api URL": "/api/v1/tickets",
+    "Api Method": "GET",
+    "Desc": "This API lists a particular number of tickets, based on the limit specified.",
+    "OAuth Scope": "Desk.tickets.READ",
+    "Request Example": "$ curl -X GET\nhttps://desk.zoho.com/api/v1/tickets?include=contacts,assignee,departments,team,isRead\n-H\n\"orgId:2389290\"\n-H\n\"Authorization:Zoho-oauthtoken 1000.3d0a155402dbb59f776fd63adb1e67c0.a41ea557a6a8d7e402690098b2056f60s\"",
+    "Params": [
+      {
+        "name": "Param Name",
+        "data_type": "Data Type",
+        "description": "Description"
+      },
+      {
+        "name": "from",
+        "data_type": "integer optional",
+        "description": "Index number, starting from which the tickets must be fetched"
+      },
+      {
+        "name": "limit",
+        "data_type": "integer optional, range : 1-100",
+        "description": "Number of tickets to fetch"
+      },
+      {
+        "name": "departmentIds see documentation",
+        "data_type": "long optional",
+        "description": "Departments from which the tickets need to be queried. Note : For Predefined Views and All Department Views : You must specify the departmentId for which the tickets need to be fetched. Otherwise, it will fetch all tickets accessible across departments. For Single Department Custom View : You must specify the departmentId of the department for which the Custom View was created. The tickets will be fetched from that department."
+      },
+      {
+        "name": "teamIds see documentation",
+        "data_type": "string optional, max chars : 100",
+        "description": "Key that filters tickets by Teams. Values allowed are Unassigned or a valid teamId . Multiple teamIds can be passed as comma-separated values."
+      },
+      {
+        "name": "viewId see documentation",
+        "data_type": "long optional",
+        "description": "ID of the view to apply while fetching the resources"
+      },
+      {
+        "name": "assignee",
+        "data_type": "string optional, max chars : 100",
+        "description": "assignee - Key that filters tickets by assignee. Values allowed are Unassigned or a valid assigneeId . Multiple assigneeIds can be passed as comma-separated values."
+      },
+      {
+        "name": "channel",
+        "data_type": "string optional, max chars : 100",
+        "description": "Filter by channel through which the tickets originated. You can include multiple values by separating them with a comma"
+      },
+      {
+        "name": "status",
+        "data_type": "string optional, max chars : 100",
+        "description": "Filter by resolution status of the ticket. You can include multiple values by separating them with a comma"
+      },
+      {
+        "name": "sortBy",
+        "data_type": "string optional, max chars : 100",
+        "description": "Sort by a specific attribute: responseDueDate or customerResponseTime or createdTime . The default sorting order is ascending. A - prefix denotes descending order of sorting."
+      },
+      {
+        "name": "receivedInDays",
+        "data_type": "integer optional",
+        "description": "Fetches recent tickets, based on customer response time . Values allowed are 15 , 30 , 90 ."
+      },
+      {
+        "name": "include see documentation",
+        "data_type": "string optional, max chars : 100",
+        "description": "Additional information related to the tickets. Values allowed are: contacts , products , departments , team , isRead and assignee . You can pass multiple values by separating them with commas in the API request."
+      },
+      {
+        "name": "fields",
+        "data_type": "string optional, max chars : 100",
+        "description": "Key that returns the values of mentioned fields (both pre-defined and custom) in your portal. All field types except multi-text are supported. Standard, non-editable fields are supported too. These fields include: statusType , webUrl , layoutId . Maximum of 30 fields is supported as comma separated values."
+      },
+      {
+        "name": "priority",
+        "data_type": "string optional, max chars : 100",
+        "description": "Key that filters tickets by priority. Multiple priority levels can be passed as comma-separated values."
+      }
+    ],
+    "Response Example": "{\n  \"data\" : [ {\n    \"ticketNumber\" : \"101\",\n    \"subCategory\" : null,\n    \"subject\" : \"Real Time analysis Requirement\",\n    \"dueDate\" : \"2016-06-21T16:16:16.000Z\",\n    \"departmentId\" : \"1892000000006907\",\n    \"channel\" : \"Email\",\n    \"isRead\" : false,\n    \"onholdTime\" : null,\n    \"language\" : \"English\",\n    \"source\" : {\n      \"appName\" : null,\n      \"extId\" : null,\n      \"type\" : \"SYSTEM\",\n      \"permalink\" : null,\n      \"appPhotoURL\" : null\n    },\n    \"closedTime\" : null,\n    \"sharedCount\" : \"0\",\n    \"responseDueDate\" : \"2017-09-05T11:21:07.000Z\",\n    \"contact\" : {\n      \"firstName\" : \"Lucas\",\n      \"lastName\" : \"Carol\",\n      \"phone\" : \"1 888 900 9646\",\n      \"mobile\" : \"9876543210\",\n      \"id\" : \"1892000000042032\",\n      \"type\" : null,\n      \"email\" : \"carol@zylker.com\",\n      \"account\" : {\n        \"website\" : null,\n        \"accountName\" : \"desk Account\",\n        \"id\" : \"1892000000975382\"\n      }\n    },\n    \"createdTime\" : \"2013-11-04T11:21:07.000Z\",\n    \"id\" : \"1892000000042034\",\n    \"department\" : {\n      \"name\" : \"dasdasdasd\",\n      \"id\" : \"1892000000006907\"\n    },\n    \"email\" : \"carol@zylker.com\",\n    \"channelCode\" : null,\n    \"customerResponseTime\" : \"2013-11-04T11:21:07.912Z\",\n    \"productId\" : null,\n    \"contactId\" : \"1892000000042032\",\n    \"threadCount\" : \"121\",\n    \"team\" : {\n      \"name\" : \"kjsdfjks\",\n      \"id\" : \"8920000000069071\",\n      \"logoUrl\" : \"https://desk.zoho.com/api/v1/teams/8920000000069071/logo?orgId=11278831\"\n    },\n    \"priority\" : \"High\",\n    \"assigneeId\" : \"1892000000056007\",\n    \"commentCount\" : \"1\",\n    \"accountId\" : \"189200000005345\",\n    \"phone\" : null,\n    \"webUrl\" : \"https://desk.zoho.com/support/zylker/ShowHomePage.do#Cases/dv/d126330fb061247d9ebddaeb9d93ba74750b0284bc703b38\",\n    \"teamId\" : \"8920000000069071\",\n    \"assignee\" : {\n      \"firstName\" : \"dasca\",\n      \"lastName\" : \"vins\",\n      \"photoURL\" : \"https://desk.zoho.com/api/v1/agents/1892000000056007/photo?orgId=298902\",\n      \"id\" : \"1892000000056007\",\n      \"email\" : \"jack@zylker.com\"\n    },\n    \"isSpam\" : false,\n    \"category\" : null,\n    \"status\" : \"Open\"\n  }, {\n    \"ticketNumber\" : \"176\",\n    \"subCategory\" : null,\n    \"statusType\" : \"Closed\",\n    \"subject\" : \"Hi. There is a sudden delay in the processing of the orders. Check this with high priority\",\n    \"dueDate\" : \"2016-06-01T14:04:07.000Z\",\n    \"departmentId\" : \"1892000000006907\",\n    \"channel\" : \"Forums\",\n    \"isRead\" : false,\n    \"onholdTime\" : null,\n    \"source\" : {\n      \"appName\" : null,\n      \"extId\" : null,\n      \"type\" : \"SYSTEM\",\n      \"permalink\" : null,\n      \"appPhotoURL\" : null\n    },\n    \"closedTime\" : null,\n    \"sharedCount\" : \"0\",\n    \"responseDueDate\" : null,\n    \"contact\" : {\n      \"firstName\" : \"Jonathan\",\n      \"lastName\" : \"Casie\",\n      \"phone\" : null,\n      \"mobile\" : \"9876543211\",\n      \"id\" : \"1892000000045028\",\n      \"type\" : null,\n      \"email\" : \"casie@zylker.com\",\n      \"account\" : {\n        \"website\" : \"www.zylker.com\",\n        \"accountName\" : \"Zylker sAccount\",\n        \"id\" : \"1892000000980421\"\n      }\n    },\n    \"createdTime\" : \"2014-03-06T09:49:50.000Z\",\n    \"id\" : \"1892000000094004\",\n    \"department\" : {\n      \"name\" : \"dasdasdasd\",\n      \"id\" : \"1892000000006907\"\n    },\n    \"email\" : \"casie@zylker.com\",\n    \"channelCode\" : null,\n    \"customerResponseTime\" : \"2014-03-22T05:05:08.471Z\",\n    \"productId\" : null,\n    \"contactId\" : \"1892000000045028\",\n    \"threadCount\" : \"72\",\n    \"team\" : {\n      \"name\" : \"kjsdfjks\",\n      \"id\" : \"8920000000069071\",\n      \"logoUrl\" : \"https://desk.zoho.com/api/v1/teams/8920000000069071/logo?orgId=11278831\"\n    },\n    \"priority\" : \"High\",\n    \"assigneeId\" : \"1892000000056007\",\n    \"commentCount\" : \"0\",\n    \"phone\" : null,\n    \"webUrl\" : \"https://desk.zoho.com/support/zylker/ShowHomePage.do#Cases/dv/d126330fb061247d9ebddaeb9d93ba74750b02214oc203b38\",\n    \"teamId\" : \"8920000000069071\",\n    \"isSpam\" : false,\n    \"assignee\" : {\n      \"firstName\" : \"dasca\",\n      \"lastName\" : \"vins\",\n      \"photoURL\" : \"https://desk.zoho.com/api/v1/agents/1892000000056007/photo?orgId=298902\",\n      \"id\" : \"1892000000056007\",\n      \"email\" : \"jack@zylker.com\"\n    },\n    \"category\" : null,\n    \"status\" : \"Closed\"\n  }, {\n    \"ticketNumber\" : \"191\",\n    \"subCategory\" : null,\n    \"statusType\" : \"On Hold\",\n    \"subject\" : \"Real Time analysis Requirement\",\n    \"dueDate\" : null,\n    \"departmentId\" : \"1892000000006907\",\n    \"channel\" : \"Chat\",\n    \"isRead\" : true,\n    \"onholdTime\" : \"2014-03-28T12:09:10.736Z\",\n    \"source\" : {\n      \"appName\" : null,\n      \"extId\" : null,\n      \"type\" : \"SYSTEM\",\n      \"permalink\" : null,\n      \"appPhotoURL\" : null\n    },\n    \"closedTime\" : null,\n    \"sharedCount\" : \"0\",\n    \"responseDueDate\" : \"2017-10-05T11:21:07.000Z\",\n    \"contact\" : {\n      \"firstName\" : \"Jonathan\",\n      \"lastName\" : \"Casie\",\n      \"phone\" : null,\n      \"mobile\" : null,\n      \"id\" : \"1892000000045028\",\n      \"type\" : null,\n      \"email\" : \"casie@zylker.com\",\n      \"account\" : {\n        \"website\" : \"www.zylker.com\",\n        \"accountName\" : \"Zylker Account\",\n        \"id\" : \"1892000000980421\"\n      }\n    },\n    \"createdTime\" : \"2014-03-21T09:16:03.000Z\",\n    \"id\" : \"1892000000137057\",\n    \"department\" : {\n      \"name\" : \"dasdasdasd\",\n      \"id\" : \"1892000000006907\"\n    },\n    \"email\" : \"casie@zylker.com\",\n    \"channelCode\" : null,\n    \"customerResponseTime\" : \"2014-03-21T10:54:21.802Z\",\n    \"productId\" : null,\n    \"contactId\" : \"1892000000045028\",\n    \"threadCount\" : \"19\",\n    \"team\" : {\n      \"name\" : \"kjsdfjks\",\n      \"id\" : \"8920000000069071\",\n      \"logoUrl\" : \"https://desk.zoho.com/api/v1/teams/8920000000069071/logo?orgId=11278831\"\n    },\n    \"priority\" : \"High\",\n    \"assigneeId\" : \"1892000000042001\",\n    \"commentCount\" : \"0\",\n    \"phone\" : null,\n    \"webUrl\" : \"https://desk.zoho.com/support/zylker/ShowHomePage.do#Cases/dv/d11bcdfb061247d9edbacb9d93ba74750b0284bc703b38\",\n    \"teamId\" : \"8920000000069071\",\n    \"isSpam\" : false,\n    \"assignee\" : {\n      \"firstName\" : \"dasca\",\n      \"lastName\" : \"vins\",\n      \"photoURL\" : \"https://desk.zoho.com/api/v1/agents/1892000000042001/photo?orgId=298902\",\n      \"id\" : \"1892000000042001\",\n      \"email\" : \"jack@zylker.com\"\n    },\n    \"category\" : null,\n    \"status\" : \"Custom On Hold\"\n  } ]\n}"
+  },
+  {
+    "Api name": "Get Archived Ticket List",
+    "Api URL": "/api/v1/tickets/archivedTickets",
+    "Api Method": "GET",
+    "Desc": "This API gets the archived tickets list  in given department.",
+    "OAuth Scope": "Desk.search.READ, Desk.tickets.READ",
+    "Request Example": "$ curl -X GET\nhttps://desk.zoho.com/api/v1/tickets/archivedTickets?from=1&limit=50&departmentId=5853000000006907&viewType=1\n-H\n\"orgId:2389290\"\n-H\n\"Authorization:Zoho-oauthtoken 1000.3d0a155402dbb59f776fd63adb1e67c0.a41ea557a6a8d7e402690098b2056f60s\"",
+    "Params": [
+      {
+        "name": "Param Name",
+        "data_type": "Data Type",
+        "description": "Description"
+      },
+      {
+        "name": "from",
+        "data_type": "integer optional, range : 0-4999",
+        "description": "Index number, starting from which the tickets must be fetched"
+      },
+      {
+        "name": "limit",
+        "data_type": "integer optional, range : 1-100",
+        "description": "Number of tickets to fetch"
+      },
+      {
+        "name": "departmentId see documentation",
+        "data_type": "long required",
+        "description": "ID of the department from which the tickets must be fetched"
+      },
+      {
+        "name": "viewType",
+        "data_type": "int optional",
+        "description": "View Type - Supported Values 1 for Compact view , 2 for Classic view ,4 for Table View. If view type is not specified, Classic View will be the default view"
+      },
+      {
+        "name": "include see documentation",
+        "data_type": "string optional, max chars : 100",
+        "description": "Key that returns additional information related to a ticket. Values allowed are: contacts , products , departments , team , isRead and assignee . All six values can be passed by separating them with a comma in the API request."
+      }
+    ],
+    "Response Example": "{\n  \"data\" : [ {\n    \"ticketNumber\" : \"836\",\n    \"sentiment\" : null,\n    \"subCategory\" : null,\n    \"statusType\" : \"Closed\",\n    \"subject\" : \"Subject updated by bulk update\",\n    \"isArchived\" : true,\n    \"dueDate\" : \"2017-02-16T05:04:01.000Z\",\n    \"departmentId\" : \"5853000000006907\",\n    \"channel\" : \"Email\",\n    \"onholdTime\" : null,\n    \"source\" : {\n      \"appName\" : null,\n      \"extId\" : null,\n      \"permalink\" : null,\n      \"type\" : \"SYSTEM\",\n      \"appPhotoURL\" : null\n    },\n    \"closedTime\" : \"2017-02-20T10:21:02.000Z\",\n    \"responseDueDate\" : null,\n    \"createdTime\" : \"2017-02-15T08:23:11.000Z\",\n    \"id\" : \"5853000001102037\",\n    \"email\" : \"carol@zylker.com\",\n    \"channelCode\" : null,\n    \"customerResponseTime\" : \"2017-02-15T08:23:11.000Z\",\n    \"productId\" : null,\n    \"contactId\" : \"5853000000273060\",\n    \"threadCount\" : \"6\",\n    \"lastThread\" : {\n      \"channel\" : \"EMAIL\",\n      \"isDraft\" : true,\n      \"isForward\" : false,\n      \"direction\" : \"out\"\n    },\n    \"priority\" : null,\n    \"layoutId\" : \"5853000001987014\",\n    \"assigneeId\" : \"5853000000281047\",\n    \"commentCount\" : \"1\",\n    \"accountId\" : \"189200000005345\",\n    \"phone\" : \"123421412125\",\n    \"webUrl\" : \"https://desk.zoho.com/support/arunasales/ShowHomePage.do#Cases/dv/5853000001102037\",\n    \"teamId\" : null,\n    \"isSpam\" : false,\n    \"category\" : null,\n    \"status\" : \"Closed\"\n  } ]\n}"
+  }]
